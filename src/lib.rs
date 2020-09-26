@@ -14,7 +14,7 @@ macro_rules! tokio_data {
 
         use std::future::Future;
         use tokio::task::JoinHandle;
-        pub async fn spawn_data<T, F>(task: F) -> JoinHandle<T::Output>
+        pub fn spawn_data<T, F>(task: F) -> JoinHandle<T::Output>
         where
             T: Future + Send + 'static,
             T::Output: Send + 'static,

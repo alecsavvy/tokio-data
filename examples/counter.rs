@@ -41,8 +41,9 @@ async fn main() {
         data.get()
     });
 
+    // two will complete first, then one will execute
     let (one, two) = join!(add_one, add_two);
 
-    println!("one: {}", one.await.unwrap());
-    println!("two: {}", two.await.unwrap())
+    println!("one: {}", one.unwrap());
+    println!("two: {}", two.unwrap())
 }
