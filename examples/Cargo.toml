@@ -1,0 +1,21 @@
+[package]
+edition = "2018"
+name = "examples"
+publish = false
+version = "0.0.0"
+
+[dev-dependencies]
+tokio = {version = "0.2.22", features = ["full"]}
+tokio_data = {version = "0.1.0", path = "../../tokio-data"}
+
+[[example]]
+name = "counter"
+path = "counter.rs"
+
+[[example]]
+name = "diesel"
+path = "diesel.rs"
+
+[[example]]
+name = "redis"
+path = "redis.rs"
